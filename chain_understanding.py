@@ -16,7 +16,7 @@ def main():
     llm = ChatOllama(model="qwen3.5:0.8b", temperature=0)
     
     chain = summary_prompt_template | llm
-    response = chain.invoke(input={"information": information})
+    response = chain.invoke(input={"information": information})      
     print(response.content)
 if __name__ == "__main__":
     main()
